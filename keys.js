@@ -1,3 +1,4 @@
+require("dotenv").config();
 console.log('this is loaded');
 
 exports.twitter = {

@@ -10,6 +10,7 @@ var spotify = new Spotify(keys.spotify);
 var client = new Twitter(keys.twitter);
 
 var inputArg = process.argv;
+var toAppend;
 
 function LIRI(inputArg) {
     if (inputArg[2] === "my-tweets") {
@@ -17,6 +18,7 @@ function LIRI(inputArg) {
         client.get('statuses/user_timeline', params, function(error, tweets, response) {
             if (!error) {
                 console.log(tweets);
+                toAppend = tweets;
             }
         });
     }
@@ -45,6 +47,7 @@ function LIRI(inputArg) {
             }
 
             console.log(data);
+            toAppend = data;
         })
     }
 
@@ -73,6 +76,7 @@ function LIRI(inputArg) {
             }
 
             console.log(data);
+            toAppend = data;
         })
     }
 
@@ -88,6 +92,7 @@ function LIRI(inputArg) {
         })
     }
 
+    //might want to write as seperate function so "do-what-it-says" command is registered here as well
     fs.appendFile("log.txt", [inputArg, toAppend], function(error, data) { //in each block of code, create a toAppend object that will include what is output to the console.  This object will then be appended to log.txt with this function
         if (error) {
             return console.log(error);

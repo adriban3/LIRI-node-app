@@ -22,7 +22,7 @@ var LIRI = function(inputArg) {
                     toAppend += "\n" + item.text;
                 })
             }
-            log(toAppend);
+            log("\nMost Recent Tweets: \n" + toAppend);
         });
     }
 
@@ -69,7 +69,7 @@ var LIRI = function(inputArg) {
 
             data = JSON.parse(body);
             console.log("Title: " + data.Title + "\n" + "Release Year: " + data.Year + "\n" + "IMDB Rating: " + data.Ratings[0].Value + "\n" + "Rotten Tomatoes Rating: " + data.Ratings[1].Value + "\n" + "Country: " + data.Country + "\n" + "Language: " + data.Language + "\n" + "Plot: " + data.Plot + "\n" + "Actors: " + data.Actors + "\n");
-            toAppend = "Title: " + data.Title + "\n" + "Release Year: " + data.Year + "\n" + "IMDB Rating: " + data.Ratings[0].Value + "\n" + "Rotten Tomatoes Rating: " + data.Ratings[1].Value + "\n" + "Country: " + data.Country + "\n" + "Language: " + data.Language + "\n" + "Plot: " + data.Plot + "\n" + "Actors: " + data.Actors + "\n";
+            toAppend = "\nTitle: " + data.Title + "\n" + "Release Year: " + data.Year + "\n" + "IMDB Rating: " + data.Ratings[0].Value + "\n" + "Rotten Tomatoes Rating: " + data.Ratings[1].Value + "\n" + "Country: " + data.Country + "\n" + "Language: " + data.Language + "\n" + "Plot: " + data.Plot + "\n" + "Actors: " + data.Actors + "\n";
             log(toAppend);
         })
     }

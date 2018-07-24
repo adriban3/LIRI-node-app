@@ -19,6 +19,7 @@ var LIRI = function(inputArg) {
         console.log("Most Recent Tweets:\n");
         var params = {screen_name: 'LiriTesty'};
         client.get('statuses/user_timeline', params, function(error, tweets, response) {
+
             if (!error) {
                 tweets.forEach(function(item, index) {
                     console.log(item.text);

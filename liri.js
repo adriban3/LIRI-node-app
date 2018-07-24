@@ -3,22 +3,23 @@ var Twitter = require("twitter");
 var Spotify = require("node-spotify-api");
 var keys = require("./keys");
 var request = require("request");
-var omdb = require("omdb");
 var fs = require("fs");
 
 var spotify = new Spotify(keys.spotify);
 var client = new Twitter(keys.twitter);
 
 var inputArg = process.argv;
-var toAppend;
+var toAppend = "";
 
 function LIRI(inputArg) {
     if (inputArg[2] === "my-tweets") {
-        var params = {screen_name: 'nodejs'};
+        var params = {screen_name: 'LiriTesty'};
         client.get('statuses/user_timeline', params, function(error, tweets, response) {
             if (!error) {
-                console.log(tweets);
-                toAppend = tweets;
+                tweets.forEach(function(item, index) {
+                    console.log(item.text);
+                    toAppend += item.text + "\n";
+                })
             }
         });
     }
@@ -28,26 +29,21 @@ function LIRI(inputArg) {
         var songName = "";
 
         for (i = 3; i < inputArg.length; i++) {
-            if (i = 3) {
-                songName += inputArg[i];
-            }
-            
-            else {
-                songName += " " + inputArg[i];
-            }
+                songName += inputArg[i] + " ";
         }
 
         if (!songName) {
-            songName = "The Sign";
+            songName = "The Sign Ace of Base";
         }
-
-        spotify.search({type: 'track', query: songName}, function(error, data) {
+        
+        spotify.search({type: 'track', query: songName.trim()}, function(error, data) {
+            
             if (error) {
                 return console.log(error);
             }
 
-            console.log(data);
-            toAppend = data;
+            console.log(data.tracks.items[0].artists[0].name + "\n" + data.tracks.items[0].name + "\n" + data.tracks.items[0].preview_url + "\n" + data.tracks.items[0].album.name + "\n");
+            toAppend = data.tracks.items[0].artists[0].name + "\n" + data.tracks.items[0].name + "\n" + data.tracks.items[0].preview_url + "\n" + data.tracks.items[0].album.name + "\n";
         })
     }
 
@@ -56,27 +52,21 @@ function LIRI(inputArg) {
         var movieTitle = "";
 
         for (i = 3; i < inputArg.length; i++) {
-
-            if (i = 3) {
-                movieTitle += inputArg[i];
-            }
-
-            else {
-                movieTitle += " " + inputArg[i];
-            }
+                movieTitle += inputArg[i] + " ";
         }
 
         if (!movieTitle) {
             movieTitle = "Mr. Nobody";
         }
-
-        omdb.get(movieTitle, true, function(error, data) {
+        
+        request("http://www.omdbapi.com/?apikey=trilogy&t=" + movieTitle.trim(), function(error, response, body) {
             if (error) {
                 return console.log(error);
             }
 
-            console.log(data);
-            toAppend = data;
+            data = JSON.parse(body);
+            console.log(data.Title + "\n" + data.Year + "\n" + data.Ratings[0].Value + "\n" + data.Ratings[1].Value + "\n" + data.Country + "\n" + data.Language + "\n" + data.Plot + "\n" + data.Actors + "\n");
+            toAppend = data.Title + "\n" + data.Year + "\n" + data.Ratings[0].Value + "\n" + data.Ratings[1].Value + "\n" + data.Country + "\n" + data.Language + "\n" + data.Plot + "\n" + data.Actors + "\n";
         })
     }
 
@@ -93,12 +83,12 @@ function LIRI(inputArg) {
     }
 
     //might want to write as seperate function so "do-what-it-says" command is registered here as well
-    fs.appendFile("log.txt", [inputArg, toAppend], function(error, data) { //in each block of code, create a toAppend object that will include what is output to the console.  This object will then be appended to log.txt with this function
+    fs.appendFile("log.txt", [inputArg, "\n", toAppend], function(error, data) { //in each block of code, create a toAppend object that will include what is output to the console.  This object will then be appended to log.txt with this function
         if (error) {
             return console.log(error);
         }
 
-        console.log("log.txt was update");
+        console.log("log.txt was updated \n");
     })
 }
 

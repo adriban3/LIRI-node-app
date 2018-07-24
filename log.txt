@@ -1,0 +1,130 @@
+C:\Program Files\nodejs\node.exe,C:\Users\dribaan\Documents\code\LIRI-node-app\liri.js,movie-this
+
+Title: Mr. Nobody
+Release Year: 2009
+IMDB Rating: 7.9/10
+Rotten Tomatoes Rating: 66%
+Country: Belgium, Germany, Canada, France, USA, UK
+Language: English, Mohawk
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+C:\Program Files\nodejs\node.exe,C:\Users\dribaan\Documents\code\LIRI-node-app\liri.js,movie-this
+
+Title: Mr. Nobody
+Release Year: 2009
+IMDB Rating: 7.9/10
+Rotten Tomatoes Rating: 66%
+Country: Belgium, Germany, Canada, France, USA, UK
+Language: English, Mohawk
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+C:\Program Files\nodejs\node.exe,C:\Users\dribaan\Documents\code\LIRI-node-app\liri.js,movie-this
+
+Title: Mr. Nobody
+Release Year: 2009
+IMDB Rating: 7.9/10
+Rotten Tomatoes Rating: 66%
+Country: Belgium, Germany, Canada, France, USA, UK
+Language: English, Mohawk
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+
+C:\Program Files\nodejs\node.exe,C:\Users\dribaan\Documents\code\LIRI-node-app\liri.js,movie-this
+
+Title: Mr. Nobody
+Release Year: 2009
+IMDB Rating: 7.9/10
+Rotten Tomatoes Rating: 66%
+Country: Belgium, Germany, Canada, France, USA, UK
+Language: English, Mohawk
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+
+C:\Program Files\nodejs\node.exe,C:\Users\dribaan\Documents\code\LIRI-node-app\liri.js,movie-this,Gone,With,The,Wind
+
+Title: Gone with the Wind
+Release Year: 1939
+IMDB Rating: 8.2/10
+Rotten Tomatoes Rating: 92%
+Country: USA
+Language: English
+Plot: A manipulative woman and a roguish man conduct a turbulent romance during the American Civil War and Reconstruction periods.
+Actors: Thomas Mitchell, Barbara O'Neil, Vivien Leigh, Evelyn Keyes
+
+C:\Program Files\nodejs\node.exe,C:\Users\dribaan\Documents\code\LIRI-node-app\liri.js,movie-this,Gone,With,The,Wind
+
+Title: Gone with the Wind
+Release Year: 1939
+IMDB Rating: 8.2/10
+Rotten Tomatoes Rating: 92%
+Country: USA
+Language: English
+Plot: A manipulative woman and a roguish man conduct a turbulent romance during the American Civil War and Reconstruction periods.
+Actors: Thomas Mitchell, Barbara O'Neil, Vivien Leigh, Evelyn Keyes
+
+C:\Program Files\nodejs\node.exe,C:\Users\dribaan\Documents\code\LIRI-node-app\liri.js,movie-this,Gone,With,The,Wind
+
+Title: Gone with the Wind
+Release Year: 1939
+IMDB Rating: 8.2/10
+Rotten Tomatoes Rating: 92%
+Country: USA
+Language: English
+Plot: A manipulative woman and a roguish man conduct a turbulent romance during the American Civil War and Reconstruction periods.
+Actors: Thomas Mitchell, Barbara O'Neil, Vivien Leigh, Evelyn Keyes
+
+C:\Program Files\nodejs\node.exe,C:\Users\dribaan\Documents\code\LIRI-node-app\liri.js,movie-this
+
+Title: Mr. Nobody
+Release Year: 2009
+IMDB Rating: 7.9/10
+Rotten Tomatoes Rating: 66%
+Country: Belgium, Germany, Canada, France, USA, UK
+Language: English, Mohawk
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+
+C:\Program Files\nodejs\node.exe,C:\Users\dribaan\Documents\code\LIRI-node-app\liri.js,movie-this,Anchorman,2
+
+Title: Anchorman 2: The Legend Continues
+Release Year: 2013
+IMDB Rating: 6.3/10
+Rotten Tomatoes Rating: 75%
+Country: USA
+Language: English
+Plot: With the 1970s behind him, San Diego's top-rated newsman, Ron Burgundy, returns to take New York City's first twenty-four-hour news channel by storm.
+Actors: Will Ferrell, Steve Carell, Paul Rudd, David Koechner
+
+C:\Program Files\nodejs\node.exe,C:\Users\dribaan\Documents\code\LIRI-node-app\liri.js,movie-this,Anchorman,2
+
+Title: Anchorman 2: The Legend Continues
+Release Year: 2013
+IMDB Rating: 6.3/10
+Rotten Tomatoes Rating: 75%
+Country: USA
+Language: English
+Plot: With the 1970s behind him, San Diego's top-rated newsman, Ron Burgundy, returns to take New York City's first twenty-four-hour news channel by storm.
+Actors: Will Ferrell, Steve Carell, Paul Rudd, David Koechner
+
+C:\Program Files\nodejs\node.exe,C:\Users\dribaan\Documents\code\LIRI-node-app\liri.js,movie-this,Gone,With,The,Wind
+
+Title: Gone with the Wind
+Release Year: 1939
+IMDB Rating: 8.2/10
+Rotten Tomatoes Rating: 92%
+Country: USA
+Language: English
+Plot: A manipulative woman and a roguish man conduct a turbulent romance during the American Civil War and Reconstruction periods.
+Actors: Thomas Mitchell, Barbara O'Neil, Vivien Leigh, Evelyn Keyes
+
+C:\Program Files\nodejs\node.exe,C:\Users\dribaan\Documents\code\LIRI-node-app\liri.js,movie-this,Anchorman
+
+Title: Anchorman
+Release Year: 2009
+IMDB Rating: 5.9/10
+Rotten Tomatoes Rating: 
+Country: Italy
+Language: N/A
+Plot: N/A
+Actors: Marco Di Francisca
+

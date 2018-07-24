@@ -128,3 +128,107 @@ Language: N/A
 Plot: N/A
 Actors: Marco Di Francisca
 
+C:\Program Files\nodejs\node.exe,C:\Users\dribaan\Documents\code\LIRI-node-app\liri.js,movie-this,Anchorman
+
+Title: Anchorman
+Release Year: 2009
+IMDB Rating: 5.9/10
+Rotten Tomatoes Rating: 
+Country: Italy
+Language: N/A
+Plot: N/A
+Actors: Marco Di Francisca
+
+C:\Program Files\nodejs\node.exe,C:\Users\dribaan\Documents\code\LIRI-node-app\liri.js,movie-this,Anchorman
+
+Title: Anchorman
+Release Year: 2009
+IMDB Rating: 5.9/10
+
+Country: Italy
+Language: N/A
+Plot: N/A
+Actors: Marco Di Francisca
+
+C:\Program Files\nodejs\node.exe,C:\Users\dribaan\Documents\code\LIRI-node-app\liri.js,movie-this,Anchorman
+
+Title: Anchorman
+Release Year: 2009
+IMDB Rating: 5.9/10
+Country: Italy
+Language: N/A
+Plot: N/A
+Actors: Marco Di Francisca
+
+C:\Program Files\nodejs\node.exe,C:\Users\dribaan\Documents\code\LIRI-node-app\liri.js,movie-this,Anchorman,2
+
+Title: Anchorman 2: The Legend Continues
+Release Year: 2013
+IMDB Rating: 6.3/10
+Rotten Tomatoes Rating: 75%
+Country: USA
+Language: English
+Plot: With the 1970s behind him, San Diego's top-rated newsman, Ron Burgundy, returns to take New York City's first twenty-four-hour news channel by storm.
+Actors: Will Ferrell, Steve Carell, Paul Rudd, David Koechner
+
+C:\Program Files\nodejs\node.exe,C:\Users\dribaan\Documents\code\LIRI-node-app\liri.js,movie-this,Spiderman
+
+Title: Spiderman
+Release Year: 1990
+IMDB Rating: 5.7/10
+Country: Switzerland
+Language: German
+Plot: N/A
+Actors: N/A
+
+C:\Program Files\nodejs\node.exe,C:\Users\dribaan\Documents\code\LIRI-node-app\liri.js,movie-this,Spiderman
+
+Title: Spiderman
+Release Year: 1990
+IMDB Rating: 5.7/10
+Country: Switzerland
+Language: German
+Plot: N/A
+Actors: N/A
+
+C:\Program Files\nodejs\node.exe,C:\Users\dribaan\Documents\code\LIRI-node-app\liri.js,movie-this,Spiderman
+
+Title: Spiderman
+Release Year: 1990
+IMDB Rating: 5.7/10
+Country: Switzerland
+Language: German
+Plot: N/A
+Actors: N/A
+
+C:\Program Files\nodejs\node.exe,C:\Users\dribaan\Documents\code\LIRI-node-app\liri.js,movie-this,Spider-man
+
+Title: Spider-Man
+Release Year: 2002
+IMDB Rating: 7.3/10
+Rotten Tomatoes Rating: 89%
+Country: USA
+Language: English
+Plot: When bitten by a genetically modified spider, a nerdy, shy, and awkward high school student gains spider-like abilities that he eventually must use to fight evil as a superhero after tragedy befalls his family.
+Actors: Tobey Maguire, Willem Dafoe, Kirsten Dunst, James Franco
+
+C:\Program Files\nodejs\node.exe,C:\Users\dribaan\Documents\code\LIRI-node-app\liri.js,movie-this,"Anchorman"
+
+Title: Anchorman
+Release Year: 2009
+IMDB Rating: 5.9/10
+Country: Italy
+Language: N/A
+Plot: N/A
+Actors: Marco Di Francisca
+
+C:\Program Files\nodejs\node.exe,C:\Users\dribaan\Documents\code\LIRI-node-app\liri.js,movie-this,"Anchorman"
+
+Title: Anchorman
+Release Year: 2009
+IMDB Rating: 5.9/10
+Country: Italy
+Language: N/A
+Plot: N/A
+Actors: Marco Di Francisca
+

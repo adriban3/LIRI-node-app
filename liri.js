@@ -74,15 +74,27 @@ var LIRI = function(inputArg) {
         }
         
         request("http://www.omdbapi.com/?apikey=trilogy&t=" + movieTitle.trim(), function(error, response, body) {
-            
+
+            data = JSON.parse(body);
+
             if (error) {
                 return console.log(error);
             }
-            //receive error when rotten tomatoes rating doesn't exist, check length and use for loop to display first two ratings?
-            data = JSON.parse(body);
-            console.log("Title: " + data.Title + "\n" + "Release Year: " + data.Year + "\n" + "IMDB Rating: " + data.Ratings[0].Value + "\n" + "Rotten Tomatoes Rating: " + data.Ratings[1].Value + "\n" + "Country: " + data.Country + "\n" + "Language: " + data.Language + "\n" + "Plot: " + data.Plot + "\n" + "Actors: " + data.Actors + "\n");
-            toAppend = "\nTitle: " + data.Title + "\n" + "Release Year: " + data.Year + "\n" + "IMDB Rating: " + data.Ratings[0].Value + "\n" + "Rotten Tomatoes Rating: " + data.Ratings[1].Value + "\n" + "Country: " + data.Country + "\n" + "Language: " + data.Language + "\n" + "Plot: " + data.Plot + "\n" + "Actors: " + data.Actors + "\n\n";
-            log(toAppend);
+
+            if (data.Response === "False") {
+                return console.log(data.Error);
+            }
+
+            if (data.Ratings.length > 1) {
+                console.log("Title: " + data.Title + "\n" + "Release Year: " + data.Year + "\n" + "IMDB Rating: " + data.Ratings[0].Value + "\n" + "Rotten Tomatoes Rating: " + data.Ratings[1].Value + "\n" + "Country: " + data.Country + "\n" + "Language: " + data.Language + "\n" + "Plot: " + data.Plot + "\n" + "Actors: " + data.Actors + "\n");
+                toAppend = "\nTitle: " + data.Title + "\n" + "Release Year: " + data.Year + "\n" + "IMDB Rating: " + data.Ratings[0].Value + "\n" + "Rotten Tomatoes Rating: " + data.Ratings[1].Value + "\n" + "Country: " + data.Country + "\n" + "Language: " + data.Language + "\n" + "Plot: " + data.Plot + "\n" + "Actors: " + data.Actors + "\n\n";
+            }
+
+            else {
+                console.log("Title: " + data.Title + "\n" + "Release Year: " + data.Year + "\n" + "IMDB Rating: " + data.Ratings[0].Value + "\n" + "Country: " + data.Country + "\n" + "Language: " + data.Language + "\n" + "Plot: " + data.Plot + "\n" + "Actors: " + data.Actors + "\n");
+                toAppend = "\nTitle: " + data.Title + "\n" + "Release Year: " + data.Year + "\n" + "IMDB Rating: " + data.Ratings[0].Value + "\n" + "Country: " + data.Country + "\n" + "Language: " + data.Language + "\n" + "Plot: " + data.Plot + "\n" + "Actors: " + data.Actors + "\n\n";
+            }
+                log(toAppend);
         })
     }
 
@@ -95,7 +107,6 @@ var LIRI = function(inputArg) {
             var dataArr = data.split(",");
             inputArg.pop()
             inputArg.push(dataArr[0], dataArr[1]);
-            console.log(inputArg);
             LIRI(inputArg);
         })
     }

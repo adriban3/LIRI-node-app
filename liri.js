@@ -12,8 +12,9 @@ var inputArg = process.argv;
 var toAppend = "";
 
 var LIRI = function(inputArg) {
-    console.log("Most Recent Tweets:\n")
+    
     if (inputArg[2] === "my-tweets") {
+        console.log("Most Recent Tweets:\n");
         var params = {screen_name: 'LiriTesty'};
         client.get('statuses/user_timeline', params, function(error, tweets, response) {
             if (!error) {

@@ -22,7 +22,7 @@ var LIRI = function(inputArg) {
                     toAppend += "\n" + item.text;
                 })
             }
-            log("\nMost Recent Tweets: \n" + toAppend);
+            log("\nMost Recent Tweets: \n" + toAppend + "\n");
         });
     }
 
@@ -80,20 +80,21 @@ var LIRI = function(inputArg) {
                 return console.log(error);
             }
 
-            dataArr = data.split(",");
-            inputArg = dataArr[0] + " " + dataArr[1];
-            LIRI(inputArg);
+            toAppend += "\n" + inputArg; //added in toAppend to be added onto when LIRI is run again, hopefully this works, might need to pass into LIRI call below
+            var dataArr = data.split(","); //added in var to declare new variable, might've been issue before
+            var newInputArg = dataArr[0] + " " + dataArr[1]; //created another new variable to pass into LIRI function
+            LIRI(newInputArg); //calling LIRI function with new variable, maybe this'll work
         })
     }
 }
 
 var log = function(toAppend) {
-    fs.appendFile("log.txt", ["\n", inputArg, "\n", toAppend], function(error, data) { 
+    fs.appendFile("log.txt", [inputArg, "\n", toAppend], function(error, data) { 
         if (error) {
             return console.log(error);
         }
 
-        console.log("\nlog.txt was updated \n");
+        console.log("\nlog.txt was updated\n");
     })
 };
 

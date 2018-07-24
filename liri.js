@@ -12,6 +12,7 @@ var inputArg = process.argv;
 var toAppend = "";
 
 var LIRI = function(inputArg) {
+    console.log("Most Recent Tweets:\n")
     if (inputArg[2] === "my-tweets") {
         var params = {screen_name: 'LiriTesty'};
         client.get('statuses/user_timeline', params, function(error, tweets, response) {
@@ -43,8 +44,8 @@ var LIRI = function(inputArg) {
                 return console.log(error);
             }
 
-            console.log(data.tracks.items[0].artists[0].name + "\n" + data.tracks.items[0].name + "\n" + data.tracks.items[0].preview_url + "\n" + data.tracks.items[0].album.name);
-            toAppend = "\n" + data.tracks.items[0].artists[0].name + "\n" + data.tracks.items[0].name + "\n" + data.tracks.items[0].preview_url + "\n" + data.tracks.items[0].album.name + "\n";
+            console.log("Artist: " + data.tracks.items[0].artists[0].name + "\n" + "Track Name: " + data.tracks.items[0].name + "\n" + "Preview URL: " + data.tracks.items[0].preview_url + "\n" + "Album Name: " + data.tracks.items[0].album.name);
+            toAppend = "\n" + "Artist: " + data.tracks.items[0].artists[0].name + "\n" + "Track Name: " + data.tracks.items[0].name + "\n" + "Preview URL: " + data.tracks.items[0].preview_url + "\n" + "Album Name: " + data.tracks.items[0].album.name + "\n";
             log(toAppend);
         })
     }
@@ -67,8 +68,8 @@ var LIRI = function(inputArg) {
             }
 
             data = JSON.parse(body);
-            console.log(data.Title + "\n" + data.Year + "\n" + data.Ratings[0].Value + "\n" + data.Ratings[1].Value + "\n" + data.Country + "\n" + data.Language + "\n" + data.Plot + "\n" + data.Actors + "\n");
-            toAppend = data.Title + "\n" + data.Year + "\n" + data.Ratings[0].Value + "\n" + data.Ratings[1].Value + "\n" + data.Country + "\n" + data.Language + "\n" + data.Plot + "\n" + data.Actors + "\n";
+            console.log("Title: " + data.Title + "\n" + "Release Year: " + data.Year + "\n" + "IMDB Rating: " + data.Ratings[0].Value + "\n" + "Rotten Tomatoes Rating: " + data.Ratings[1].Value + "\n" + "Country: " + data.Country + "\n" + "Language: " + data.Language + "\n" + "Plot: " + data.Plot + "\n" + "Actors: " + data.Actors + "\n");
+            toAppend = "Title: " + data.Title + "\n" + "Release Year: " + data.Year + "\n" + "IMDB Rating: " + data.Ratings[0].Value + "\n" + "Rotten Tomatoes Rating: " + data.Ratings[1].Value + "\n" + "Country: " + data.Country + "\n" + "Language: " + data.Language + "\n" + "Plot: " + data.Plot + "\n" + "Actors: " + data.Actors + "\n";
             log(toAppend);
         })
     }

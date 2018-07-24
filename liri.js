@@ -80,7 +80,6 @@ var LIRI = function(inputArg) {
                 return console.log(error);
             }
 
-            toAppend += "\n" + inputArg; //added in toAppend to be added onto when LIRI is run again, hopefully this works, might need to pass into LIRI call below
             var dataArr = data.split(","); //added in var to declare new variable, might've been issue before
             var newInputArg = dataArr[0] + " " + dataArr[1]; //created another new variable to pass into LIRI function
             LIRI(newInputArg); //calling LIRI function with new variable, maybe this'll work
@@ -89,7 +88,7 @@ var LIRI = function(inputArg) {
 }
 
 var log = function(toAppend) {
-    fs.appendFile("log.txt", [inputArg, "\n", toAppend], function(error, data) { 
+    fs.appendFile("log.txt", inputArg + "\n" + toAppend, "utf8", function(error, data) { 
         if (error) {
             return console.log(error);
         }

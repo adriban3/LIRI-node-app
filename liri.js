@@ -11,16 +11,17 @@ var client = new Twitter(keys.twitter);
 var inputArg = process.argv;
 var toAppend = "";
 
-function LIRI(inputArg) {
+var LIRI = function(inputArg) {
     if (inputArg[2] === "my-tweets") {
         var params = {screen_name: 'LiriTesty'};
         client.get('statuses/user_timeline', params, function(error, tweets, response) {
             if (!error) {
                 tweets.forEach(function(item, index) {
                     console.log(item.text);
-                    toAppend += item.text + "\n";
+                    toAppend += "\n" + item.text;
                 })
             }
+            log(toAppend);
         });
     }
 
@@ -42,8 +43,9 @@ function LIRI(inputArg) {
                 return console.log(error);
             }
 
-            console.log(data.tracks.items[0].artists[0].name + "\n" + data.tracks.items[0].name + "\n" + data.tracks.items[0].preview_url + "\n" + data.tracks.items[0].album.name + "\n");
-            toAppend = data.tracks.items[0].artists[0].name + "\n" + data.tracks.items[0].name + "\n" + data.tracks.items[0].preview_url + "\n" + data.tracks.items[0].album.name + "\n";
+            console.log(data.tracks.items[0].artists[0].name + "\n" + data.tracks.items[0].name + "\n" + data.tracks.items[0].preview_url + "\n" + data.tracks.items[0].album.name);
+            toAppend = "\n" + data.tracks.items[0].artists[0].name + "\n" + data.tracks.items[0].name + "\n" + data.tracks.items[0].preview_url + "\n" + data.tracks.items[0].album.name + "\n";
+            log(toAppend);
         })
     }
 
@@ -67,6 +69,7 @@ function LIRI(inputArg) {
             data = JSON.parse(body);
             console.log(data.Title + "\n" + data.Year + "\n" + data.Ratings[0].Value + "\n" + data.Ratings[1].Value + "\n" + data.Country + "\n" + data.Language + "\n" + data.Plot + "\n" + data.Actors + "\n");
             toAppend = data.Title + "\n" + data.Year + "\n" + data.Ratings[0].Value + "\n" + data.Ratings[1].Value + "\n" + data.Country + "\n" + data.Language + "\n" + data.Plot + "\n" + data.Actors + "\n";
+            log(toAppend);
         })
     }
 
@@ -76,20 +79,21 @@ function LIRI(inputArg) {
                 return console.log(error);
             }
 
-            console.log(data) //next two lines won't work properly because of the comma, should you use data.split to append to array, or a different method to simply remove the comma
-            inputArg = data;
+            dataArr = data.split(",");
+            inputArg = dataArr[0] + " " + dataArr[1];
             LIRI(inputArg);
         })
     }
+}
 
-    //might want to write as seperate function so "do-what-it-says" command is registered here as well
-    fs.appendFile("log.txt", [inputArg, "\n", toAppend], function(error, data) { //in each block of code, create a toAppend object that will include what is output to the console.  This object will then be appended to log.txt with this function
+var log = function(toAppend) {
+    fs.appendFile("log.txt", ["\n", inputArg, "\n", toAppend], function(error, data) { 
         if (error) {
             return console.log(error);
         }
 
-        console.log("log.txt was updated \n");
+        console.log("\nlog.txt was updated \n");
     })
-}
+};
 
 LIRI(inputArg);
